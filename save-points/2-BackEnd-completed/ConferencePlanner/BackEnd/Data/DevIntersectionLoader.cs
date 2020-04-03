@@ -17,7 +17,7 @@ namespace BackEnd
             var speakerNames = new Dictionary<string, Speaker>();
             var tracks = new Dictionary<string, Track>();
 
-            JArray doc = await JArray.LoadAsync(reader);
+            var doc = await JArray.LoadAsync(reader);
 
             foreach (JObject item in doc)
             {
