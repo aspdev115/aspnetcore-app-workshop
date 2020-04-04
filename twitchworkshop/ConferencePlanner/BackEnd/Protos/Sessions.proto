@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "BackEnd.Protos";
+
+package backend;
+
+service Sessions {
+
+	rpc GetSessions (SessionRequest) returns (SessionResponse);
+
+}
+
+message Session {
+
+	int32 Id = 1;
+	string Title = 2;
+	string Abstract = 3;
+	string StartTime = 4;
+	string EndTime = 5;
+
+}
+
+message SessionRequest {}
+
+message SessionResponse {
+	repeated Session Sessions = 1;
+}
